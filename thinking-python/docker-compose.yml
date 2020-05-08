@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  python:
+    build: .
+    volumes:
+      - ./src:/usr/src/app
+    ports:
+      - "8000:8000"
