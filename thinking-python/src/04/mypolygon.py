@@ -1,10 +1,13 @@
 import turtle
 import math
 
+def draw_lines(turtle, steps, step_angle, step_length):
+    for i in range (int(steps)):
+        turtle.lt(step_angle)
+        turtle.fd(step_length)
+
 def polygon(turtle, length, sides):
-    for i in range(sides):
-        turtle.fd(length)
-        turtle.lt(360 / sides)
+    draw_lines(turtle, sides, (360 / sides), length)
 
 def square(turtle, side_length):
     polygon(turtle, side_length, 4)
@@ -16,9 +19,7 @@ def arc(turtle, radius, angle):
     step_length = arc_length / steps
     step_angle = angle / steps
 
-    for i in range (int(steps)):
-        turtle.lt(step_angle)
-        turtle.fd(step_length)
+    draw_lines(turtle, steps, step_angle, step_length)
 
 def circle(turtle, radius):
     arc(turtle, radius, 360)
