@@ -26,7 +26,7 @@ def circle(turtle, radius):
 
 
 
-bob = turtle.Turtle()
+# bob = turtle.Turtle()
 
 # square(bob, 100)
 
@@ -34,6 +34,6 @@ bob = turtle.Turtle()
 
 # circle(bob, 100)
 
-arc(bob, 100, 90)
+# arc(bob, 100, 90)
 
-turtle.mainloop()
+# turtle.mainloop()
