@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  php:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DISPLAY # to run X apps from inside the container
